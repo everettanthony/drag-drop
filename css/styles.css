@@ -26,6 +26,17 @@
   background: #d6d6d6;
 }
 
+.drag-hdr {
+	align-items: center;
+	display: flex;
+}
+
+.drag-total {
+	font-size: 1.1rem;
+	font-weight: 700;
+	margin-left: 10px;
+}
+
 .drag-list {
 	height: 100%;
 	position: relative;
@@ -41,6 +52,7 @@
 	height: 85px;
 	padding: 0 1.25rem;
 	text-transform: uppercase;
+	transition: background 200ms ease-in-out;
 	width: 100%;
 }
 
@@ -79,6 +91,7 @@
 	background: linear-gradient(90deg, rgba(252,77,77,1) 0%, rgba(252,85,77,1) 56%, rgba(251,246,77,1) 81%, rgba(16,252,55,1) 100%);
 	border: 1px solid #212529;
 	border-radius: 4px;
+	flex-grow: 1;
 	height: 2rem;
 	position: relative;
 }

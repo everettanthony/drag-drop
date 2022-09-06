@@ -1,5 +1,6 @@
 const dragList = document.querySelector('.drag-list');
 const progress = document.querySelector('.progress-bar');
+const total = document.querySelector('.drag-total');
 const dragTarget = document.querySelector('.drag-target');
 const dragItems = document.querySelectorAll('.drag-list .drag-item');
 const sortable = new Sortable(dragList, {
@@ -12,6 +13,9 @@ const sortable = new Sortable(dragList, {
         const dataWeight = parseInt(evt.clone.getAttribute('data-weight'), 10);
         weight -= dataWeight;
         progress.style.width = `${weight}%`;
+        total.textContent = `${weight} lbs`;
+
+        weightStatus(weight);
     },
 });
 
@@ -27,8 +31,17 @@ const target = new Sortable(dragTarget, {
         let className = '';
         weight += dataWeight;
         progress.style.width = `${weight}%`;
+        total.textContent = `${weight} lbs`;
+
+        weightStatus(weight);
     },
 });
+
+function weightStatus(val) {
+    val > 0 ? 
+        total.classList.remove('d-none') : 
+        total.classList.add('d-none');
+}
 
 let weight = 0;
 progress.style.width = `${0}%`;
