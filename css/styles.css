@@ -1,0 +1,75 @@
+.drag {
+	padding: 2rem;
+}
+
+.drag-col {
+	background: #e9ecef;
+	border-radius: 4px;
+	height: 552px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding: .5rem;
+}
+
+.drag-col::-webkit-scrollbar {
+  background-color: #d6d6d6;
+  height: 6px;
+  width: 6px;
+}
+
+.drag-col::-webkit-scrollbar-thumb {
+  background: #aeaeae;
+  border-radius: 4px;
+}
+
+.drag-col::-webkit-scrollbar-track {
+  background: #d6d6d6;
+}
+
+.drag-list {
+	height: 100%;
+	position: relative;
+}
+
+.drag-item {
+	align-items: center;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	display: flex;
+	font-size: 1.1rem;
+	height: 85px;
+	padding: 0 1.25rem;
+	text-transform: uppercase;
+	width: 100%;
+}
+
+.drag-item:not(:last-child) {
+	margin-bottom: 5px;
+}
+
+.drag-item.dragging {
+	background-color: transparent;
+	border: 1px solid #ccc;
+	color: transparent;
+}
+
+.item-order {
+	font-weight: 700;
+	margin-right: 8px;
+}
+
+.drag-target {
+	background-color: transparent;
+	height: 100%;
+}
+
+.sortable-ghost {
+	background-color: transparent;
+	border: 1px dashed #9a9a9a;
+	color: transparent;
+}
+
+.sortable-chosen {
+	cursor: move;
+}
